@@ -1,0 +1,29 @@
+.heading-primary{
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.025;
+    letter-spacing: -0.5px;
+}
+
+.heading-secondary{
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.1;
+    color:$secondary-color;
+}
+
+.subtitle{
+    font-size: 1.2rem;
+    color:$secondary-color;
+    font-style: italic;
+}
+
+.paragraph{
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.paragraph--secondary{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}

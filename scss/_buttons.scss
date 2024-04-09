@@ -1,0 +1,59 @@
+.btn{
+    &:link,&:visited{
+        text-decoration: none;
+        color:inherit;
+        text-transform: uppercase;
+        padding:1rem 6rem;
+        font-size: 2rem;
+        border-radius: 10rem;
+        background-color: $secondary-color;
+        color:$main-color-dark;
+        transition: all .3s;
+    }
+
+    &:hover{
+        background-color: $secondary-color-dark;
+    }
+
+    &--link:link,&--link:visited{
+        padding:1rem 3rem;
+        font-size: 1.2rem;
+        background-color: $secondary-color-light;
+
+        @media only screen and (max-width: $small-screens){
+           padding:1rem 1.5rem;
+        }
+    }
+}
+
+.btn--secondary{
+    &:link,&:visited{
+        color:inherit;
+        text-transform: uppercase;
+        padding:4px 1.5rem;
+        text-decoration: underline;
+        color:$secondary-color;
+        display: block;
+    }
+
+    &:hover{
+        animation: pulsate 1s infinite;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}

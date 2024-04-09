@@ -1,0 +1,58 @@
+.footer{
+    grid-column: full-start / full-end;
+    background-color: $dark-color;
+    color:$white-color;
+
+    display: grid;
+    grid-template-columns: repeat(2,30rem);
+    justify-content:space-between ;
+    padding:2.4rem;
+
+    @media only screen and (max-width: $custom-small){
+        grid-template-columns: 30rem;
+        justify-content:center ;
+        gap:3.2rem;
+    }
+
+    &__logo-container{
+
+        @media only screen and (max-width: $custom-small){
+            text-align: center;
+        }
+    }
+
+    &__logo{
+        font-size: 4.8rem;
+    }
+
+
+    &__nav-title{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    &__list{
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item{
+        
+        &:not(:last-child){
+            margin-bottom: 1.6rem;          
+        }
+
+    }
+
+    &__link{
+        &:link,&:visited{
+            text-decoration: none;
+            color:#cdcdcd;
+            transition: all .2s;
+        }
+
+        &:hover{
+            color:$white-color;
+        }
+    }
+}

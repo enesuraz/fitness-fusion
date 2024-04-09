@@ -1,0 +1,46 @@
+$main-color:#6b9471;
+$main-color-light:#89a98d;
+$main-color-dark:#4b684f;
+
+$secondary-color:#fcd739;
+$secondary-color-light:#fddf61;
+$secondary-color-dark:#e3c233;
+
+$white-color:#fffefd;
+$dark-color:#020301;
+
+$largest-screens:62.5em;
+$medium-screens:51.25em;
+$small-screens:43.75em;
+$custom-small:37.5em;
+
+*,*::before,*::after{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $largest-screens){
+        font-size: 50%;
+    }
+}
+
+body{
+    font-family: "Fira Sans", sans-serif;
+    font-size:1.6rem;
+    color:$dark-color;
+    line-height: 1;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 80vh min-content 45vw repeat(3,min-content);
+    grid-template-columns: [full-start] minmax(4.8rem,1fr) [middle-start] repeat(8,[col-start] minmax(min-content,14rem) [col-end]) [middle-end] minmax(4.8rem,1fr) [full-end];
+
+    @media only screen and (max-width: $small-screens){
+        grid-template-rows: 7rem calc(100vh - 7rem); 
+    }
+}
